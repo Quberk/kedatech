@@ -44,6 +44,19 @@
             </field>
         </record>
 
+        <record id="material_material_search_view" model="ir.ui.view">
+            <field name="name">material.material.search.view</field>
+            <field name="model">material.material</field>
+            <field name="arch" type="xml">
+                <search string="Materials">
+                    <filter string="Fabric material" name="fabric_type" domain="[('material_type', '=', 'fabric')]"/>
+                    <filter string="Jeans material" name="jeans_type" domain="[('material_type', '=', 'jeans')]"/>
+                    <filter string="Cotton material" name="cotton_type" domain="[('material_type', '=', 'cotton')]"/>
+                    
+                </search>
+            </field>
+        </record>
+
         <record id="action_material_material" model="ir.actions.act_window">
             <field name="name">Materials</field>
             <field name="res_model">material.material</field>

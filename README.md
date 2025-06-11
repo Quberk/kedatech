@@ -23,3 +23,5 @@ API Endpoints.
 
 HOW TO RUN Unit Tests:
     ./odoo-bin -d <your_database_name> -i <your_module_name> --test-enable --stop-after-init
+
+You can check the ERD From the ERD png file.

@@ -1,4 +1,4 @@
-Module Overview
+Module Overview \n
     This module provides a REST API to manage materials that are intended for sale. It includes:
 
     - Creating a material

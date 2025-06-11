@@ -1,4 +1,4 @@
-Module Overview <br>
+Module Overview.
     This module provides a REST API to manage materials that are intended for sale. It includes:
 
     - Creating a material
@@ -12,7 +12,7 @@ Module Overview <br>
     - Buy Price (must be ≥ 100)
     - Related Supplier
 
-API Endpoints
+API Endpoints.
     All endpoints use type='json' and support POST only methods.
     endpoints:
     - "/api/materials/create"

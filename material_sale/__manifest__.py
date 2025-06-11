@@ -21,7 +21,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
-
+    # 'test': ['tests/test_material_api.py'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',

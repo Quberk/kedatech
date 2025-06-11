@@ -4,7 +4,8 @@ import json
 
 class MaterialController(http.Controller):
 
-    @http.route(['/api/materials'], type='json', auth='public', 
+
+    @http.route(['/api/materials/create'], type='json', auth='public', 
                 methods=["POST"], csrf=False)
     def create_material(self, code=None, name=None, material_type=None, 
                         buy_price=None, supplier_id=None):
@@ -28,8 +29,8 @@ class MaterialController(http.Controller):
         return {"status": "success", "data": {"id": material.id}}
     
 
-    @http.route('/api/materials', type='json', auth='public', 
-                methods=['GET'], csrf=False)
+    @http.route('/api/materials/get', type='json', auth='public', 
+                methods=['POST'], csrf=False)
     def list_materials(self, material_type=None):
         domain = []
         print("material_type:", str(material_type))
@@ -54,8 +55,8 @@ class MaterialController(http.Controller):
         }
 
 
-    @http.route('/api/materials', type='json', auth='public',
-                methods=['PUT'], csrf=False)
+    @http.route('/api/materials/update', type='json', auth='public',
+                methods=['POST'], csrf=False)
     def update_material(self, material_id=None, code=None, name=None,
                         material_type=None, buy_price=None, supplier_id=None):
         print("Update Material")
@@ -81,8 +82,8 @@ class MaterialController(http.Controller):
         return {"success": True}
     
 
-    @http.route('/api/materials', type='json', auth='public', 
-                methods=['DELETE'], cstf=False)
+    @http.route('/api/materials/delete', type='json', auth='public', 
+                methods=['POST'], csrf=False)
     def delete_material(self, material_id):
         material = request.env['material.material'].sudo().browse(material_id)
         if not material.exists():
